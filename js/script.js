@@ -43,7 +43,7 @@ createApp({
 
         addNewElement(content){
             if(content != "" && (!this.worksList.includes(content))){
-                this.worksList.push(content);
+                this.worksList.push({text : content, done : false});
                 this.clearInput();
             } else {
                 // Inserire nel dom, per informare l'utente che non ha inserito niente

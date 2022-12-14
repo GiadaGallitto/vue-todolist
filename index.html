@@ -17,7 +17,7 @@
             <header class="container text-center w-75 mx-auto">
                 <h1>Todolist</h1>
                 <div class="user-imput">
-                    <input type="text" v-model.trim="newTodoElement">
+                    <input type="text" v-model.trim="newTodoElement" @keyup.enter="addNewElement(newTodoElement)">
                     <button @click="addNewElement(newTodoElement)" >Inserisci</button>
                 </div>
             </header>
