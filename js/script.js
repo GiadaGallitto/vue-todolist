@@ -52,7 +52,8 @@ createApp({
 
         clearInput(){
             this.newTodoElement = "";
-        }
+        },
+
     },
     
 }).mount(`#app`);

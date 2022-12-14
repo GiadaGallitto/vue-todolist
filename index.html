@@ -27,11 +27,13 @@
                     <h2 class="mb-4">Lista delle commissioni:</h2>
                     <ul class="list-unstyled w-75">
                         <li v-for="element in worksList" class="border border-2 border-dark p-3 d-flex justify-content-between">
-                            <div v-if="element.done != true" >
-                                {{element.text}}
-                            </div>
-                            <div v-else class="text-decoration-line-through">
-                                {{element.text}}
+                            <div class="text" @click="element.done = true">
+                                <div v-if="element.done != true" >
+                                    {{element.text}}
+                                </div>
+                                <div v-else class="text-decoration-line-through">
+                                    {{element.text}}
+                                </div>
                             </div>
                             <i class="fa-regular fa-circle-xmark text-black fs-4" @click="removeTodoElement(element) "></i>
                         </li>
