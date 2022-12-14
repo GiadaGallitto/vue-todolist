@@ -45,8 +45,6 @@ createApp({
             if(content != "" && (!this.worksList.includes(content))){
                 this.worksList.push({text : content, done : false});
                 this.clearInput();
-            } else {
-                // Inserire nel dom, per informare l'utente che non ha inserito niente
             }
         },
 
@@ -56,11 +54,13 @@ createApp({
 
         changeDoneValue(index){
 
-            if(this.worksList[index].done){
-                this.worksList[index].done = false
-            } else {
-                this.worksList[index].done = true
-            }
+            // if(this.worksList[index].done){
+            //     this.worksList[index].done = false
+            // } else {
+            //     this.worksList[index].done = true
+            // }
+
+            this.worksList[index].done = !this.worksList[index].done
         }
     },
     
