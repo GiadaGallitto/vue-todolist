@@ -26,8 +26,8 @@
                 <div class="todolist-wrapper">
                     <h2 class="mb-4">Lista delle commissioni:</h2>
                     <ul class="list-unstyled w-75">
-                        <li v-for="element in worksList" class="border border-2 border-dark p-3 d-flex justify-content-between">
-                            <div class="text" @click="changeDoneValue(element.done)">
+                        <li v-for="(element, index) in worksList" class="border border-2 border-dark p-3 d-flex justify-content-between">
+                            <div class="text" @click="changeDoneValue(index)">
                                 <div v-if="element.done != true">
                                     {{element.text}}
                                 </div>

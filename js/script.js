@@ -54,14 +54,12 @@ createApp({
             this.newTodoElement = "";
         },
 
-        changeDoneValue(elementCheck){
+        changeDoneValue(index){
 
-            doneValue = elementCheck
-
-            if(doneValue = true){
-                elementCheck = false;
+            if(this.worksList[index].done){
+                this.worksList[index].done = false
             } else {
-                elementCheck = true
+                this.worksList[index].done = true
             }
         }
     },
