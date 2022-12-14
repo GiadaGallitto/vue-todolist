@@ -54,6 +54,16 @@ createApp({
             this.newTodoElement = "";
         },
 
+        changeDoneValue(elementCheck){
+
+            doneValue = elementCheck
+
+            if(doneValue = true){
+                elementCheck = false;
+            } else {
+                elementCheck = true
+            }
+        }
     },
     
 }).mount(`#app`);

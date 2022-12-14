@@ -11,3 +11,7 @@ li i:hover{
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
+li div.text:hover{
+    cursor: pointer;
+}
