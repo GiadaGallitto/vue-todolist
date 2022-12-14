@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data() {
         return {
+            newTodoElement: "",
             worksList : [
                 {
                     text : "Ritirare il bucato",
@@ -38,6 +39,19 @@ createApp({
             if(elementIndex > -1){
                 this.worksList.splice(elementIndex, 1);
             }
+        },
+
+        addNewElement(content){
+            if(content != "" && (!this.worksList.includes(content))){
+                this.worksList.push(content);
+                this.clearInput();
+            } else {
+                // Inserire nel dom, per informare l'utente che non ha inserito niente
+            }
+        },
+
+        clearInput(){
+            this.newTodoElement = "";
         }
     },
     
