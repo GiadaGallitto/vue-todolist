@@ -11,20 +11,28 @@
 
     <body>
 
-        <header class="container text-center w-75 mx-auto">
-            <h1>Todolist</h1>
-        </header>
+        <div id="app">
+            <header class="container text-center w-75 mx-auto">
+                <h1>Todolist</h1>
+            </header>
+    
+            <main class="container w-75 mx-auto">
+                <div class="todolist-wrapper">
+                    <h2 class="mb-4">Lista delle commissioni:</h2>
+                    <ul class="list-unstyled w-75">
+                        <li v-for="element in worksList" class="border border-2 border-dark p-3">
+                            <div v-if="element.done != true" >
+                                {{element.text}}
+                            </div>
+                            <div v-else class="text-decoration-line-through">
+                                {{element.text}}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
 
-        <main class="container w-75 mx-auto">
-            <div class="todolist-wrapper">
-                <h2 class="mb-4">Lista delle commissioni:</h2>
-                <ul class="list-unstyled w-75">
-                    <li class="border border-2 border-dark p-3">
-                        Element
-                    </li>
-                </ul>
-            </div>
-        </main>
 
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./js/script.js"></script>
