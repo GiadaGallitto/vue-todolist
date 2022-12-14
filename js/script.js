@@ -33,7 +33,12 @@ createApp({
     },
 
     methods: {
-
+        removeTodoElement(elementToRemove){
+            elementIndex = this.worksList.indexOf(elementToRemove); 
+            if(elementIndex > -1){
+                this.worksList.splice(elementIndex, 1);
+            }
+        }
     },
     
 }).mount(`#app`);
